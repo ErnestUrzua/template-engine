@@ -81,7 +81,7 @@ function addManager() {
 }
 
 function addEngineer() {
-    return teamArray.push(inquirer.prompt([
+    return inquirer.prompt([
         {
             type: "input",
             message: "name:",
@@ -102,13 +102,14 @@ function addEngineer() {
             message: "github username:",
             name: "github"
         }
-    ])).then(function(userChoice){
-        //
+    ]).then(function(response){
+        teamArray.push(response);
+        mainMenu();
     })
 }
 
 function addIntern() {
-    return teamArray.push(inquirer.prompt([
+    return inquirer.prompt([
         {
             type: "input",
             message: "name:",
@@ -129,8 +130,9 @@ function addIntern() {
             message: "school:",
             name: "school"
         }
-    ])).then(function(userChoice){
-        //
+    ]).then(function(response){
+        teamArray.push(response);
+        mainMenu();
     })
 }
 // After the user has input all employees desired, call the `render` function (required
