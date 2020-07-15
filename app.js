@@ -10,9 +10,47 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+//start function 
+start();
+
+async function start() {
+    console.log("Build a Team Roster\n");
+    var answers = await managerPrompt();
+    console.log(answers);
+}
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+//user prompts
+function managerPrompt() {
+    return inquirer.prompt([
+        {
+            type: "input",
+            message: "Managers name:",
+            name: "manager"
+        },
+        {
+            type: "input",
+            message: "Managers Id:",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "Managers email:",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "Managers role:",
+            name: "role"
+        },
+        {
+            type: "input",
+            message: "Managers office number:",
+            name: "officeNumber"
+        }
+    ])
+}
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
