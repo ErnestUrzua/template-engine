@@ -59,7 +59,7 @@ function addManager() {
         {
             type: "input",
             message: "name:",
-            name: "manager"
+            name: "name"
         },
         {
             type: "input",
@@ -81,6 +81,7 @@ function addManager() {
         const id = response.id;
         const email = response.email;
         const officeNumber = response.officeNumber;
+        console.log(response.officeNumber);
         var newManager = new Manager(name,id,email,officeNumber);
         teamArray.push(newManager);
         mainMenu();
@@ -94,7 +95,7 @@ function addEngineer() {
         {
             type: "input",
             message: "name:",
-            name: "engineer"
+            name: "name"
         },
         {
             type: "input",
@@ -116,7 +117,7 @@ function addEngineer() {
         const id = response.id;
         const email = response.email;
         const github = response.github;
-        var newEngineer = new Manager(name,id,email,github);
+        var newEngineer = new Engineer(name,id,email,github);
         teamArray.push(newEngineer);
         mainMenu();
     })
@@ -127,7 +128,7 @@ function addIntern() {
         {
             type: "input",
             message: "name:",
-            name: "intern"
+            name: "name"
         },
         {
             type: "input",
@@ -149,7 +150,7 @@ function addIntern() {
         const id = response.id;
         const email = response.email;
         const school = response.school;
-        var newIntern = new Manager(name,id,email,school);
+        var newIntern = new Intern(name,id,email,school);
         teamArray.push(newIntern);
         mainMenu();
     })
