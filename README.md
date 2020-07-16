@@ -9,6 +9,7 @@
 - must pass all tests in test folder
 ### Screen Shot
 ![Employee Summary 1](ss1.jpg)
+![demo](template-engine-demo.gif)
 ### Test Results
 ![Test Results](tests.jpg)
 
