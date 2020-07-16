@@ -83,6 +83,7 @@ function addManager() {
         const officeNumber = response.officeNumber;
         console.log(response.officeNumber);
         var newManager = new Manager(name,id,email,officeNumber);
+        console.log(newManager);
         teamArray.push(newManager);
         mainMenu();
     })
